@@ -1,5 +1,6 @@
 @import "dist/css/bootstrap.min.css";
 @import "dist/font-awesome/less/font-awesome";
+@import "variables";
 
  * {
    margin: 0;
@@ -8,4 +9,17 @@
 .app{
   min-height: 100%;
   min-width: 100%;
+}
+
+.ds-pane {
+  height: 150px;
+  margin-bottom: 10px;
+  background-color: @primary-color;
+  box-shadow: @box-shadow-light;
+}
+
+.ds-jump {
+  height: 15px;
+  width: 100%;
+  display: inline-block;
 }

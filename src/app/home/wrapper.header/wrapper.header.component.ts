@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {HomeState} from "../home.state";
 
 @Component({
   moduleId: module.id,
@@ -7,5 +8,11 @@ import {Component} from "@angular/core";
   styleUrls: ['wrapper.header.component.less']
 })
 export class WrapperHeaderComponent {
+
+  constructor(public state: HomeState) { }
+
+  changeState() {
+    this.state.sideNavMobile = this.state.sideNavMobile === 'inactive' ? 'active'  : 'inactive';
+  }
 
 }

@@ -2,8 +2,28 @@
 
 .wrapper {
   position: absolute;
-  top: 0;
+  padding: 10px 5px 15px 5px;
+  top: 50px;
   bottom: 0;
   right: 0;
   left: @sidenav-width;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    left: 0;
+  }
+}
+
+.wrapper::-webkit-scrollbar {
+  ._scrollbar
+}
+
+.wrapper::-webkit-scrollbar-track {
+  ._scrollbar-track
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  ._scrollbar-thumb
 }

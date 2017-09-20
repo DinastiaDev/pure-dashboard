@@ -1,14 +1,19 @@
 @import "../../../variables.less";
 
+ul {
+  padding-left: 0;
+}
+
 .sidenav {
   background-color: @primary-color;
   box-shadow: @box-shadow;
-  min-height: 100%;
   width: @sidenav-width;
   display: inline-block;
-  position: relative;
+  top: 0;
+  bottom: 0;
+  position: absolute;
   padding-top: 10px;
-  z-index: 100;
+  z-index: 10000;
 }
 
 .ds-brand {
@@ -47,6 +52,7 @@
   height: 80px;
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   border-top: @light-border;
   background-color: @primary-color;
@@ -68,4 +74,11 @@
     color: @font-color;
   }
 
+}
+
+@media screen and (min-width: 769px) {
+  .sidenav {
+    left: 0 !important;
+    top: 0 !important;
+  }
 }
